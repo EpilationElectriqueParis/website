@@ -21,6 +21,28 @@
     --font-size: 18px;
 }
 
+@keyframes arrow {
+
+    0%,
+    100% {
+        transform: translate(-50%, -25%) scaleX(1.5) rotate(45deg);
+    }
+
+    50% {
+        transform: translate(-50%, 100%) scaleX(1.5) rotate(45deg);
+    }
+}
+@keyframes fadeInTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }       
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 body,
 html {
     margin: 0;
@@ -54,6 +76,8 @@ header {
     background-color: rgba(245, 245, 245, 0.8);
     backdrop-filter: blur(10px);
     box-shadow: #000 0 0 var(--header-shadow-height);
+    animation: fadeInTop 0.5s ease-in-out;
+    
 }
 
 header h1 {
@@ -279,19 +303,6 @@ section video {
 
 }
 
-@keyframes arrow {
-
-    0%,
-    100% {
-        transform: translate(-50%, -25%) scaleX(1.5) rotate(45deg);
-    }
-
-    50% {
-        transform: translate(-50%, 100%) scaleX(1.5) rotate(45deg);
-    }
-}
-
-
 div.contact {
     display: flex;
     flex-direction: row;
@@ -364,13 +375,14 @@ a.contact img {
         height: var(--header-height-full);
         padding: 0;
         transform: unset;
+        
     }
 
     header nav ul {
         display: none;
         transform: unset;
+        animation: fadeInTop 0.5s ease-in-out;
     }
-
 
     header.top nav ul {
         display: flex;

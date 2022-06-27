@@ -56,10 +56,6 @@ header {
     box-shadow: #000 0 0 var(--header-shadow-height);
 }
 
-header.top {
-    height: var(--header-height-full);
-}
-
 header h1 {
     position: relative;
     left: 0;

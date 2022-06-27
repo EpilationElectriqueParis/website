@@ -1,0 +1,28 @@
+{
+    "theme_color": "#2196f3",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/index.html",
+    "name": "Épilation Électrique Paris",
+    "short_name": "Épilation Électrique Paris",
+    "description": "La technologie Apilus utilisée dans ce centre permet une épilation rapide, définitive et sans douleur, pour toutes les peaux et tous les poils.",
+    "icons": [
+        {
+            "src": "res/icons/64.png",
+            "sizes": "64x64",
+            "type": "image/png"
+        },
+        {
+            "src": "res/icons/256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "res/icons/512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+
+}

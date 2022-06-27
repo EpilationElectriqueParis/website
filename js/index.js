@@ -11,11 +11,40 @@ function main() {
     updateHeader();
     // Get the --mobile variable
     var mobile = getComputedStyle(document.documentElement).getPropertyValue("--mobile");
-    
+
     // If the device is not a mobile, start the video
+    var video = document.querySelector("#video-presentation");
     if (mobile == 0) {
-        var video = document.querySelector("#video-presentation");
+        // set the file name of the video
+        if (video.canPlayType("video/mp4")) {
+            video.src = "res/res-full/presentation.mp4";
+        }
+        if (video.canPlayType("video/webm")) {
+            video.src = "res/res-full/presentation.webm";
+        }
+        console.log("Starting video in full size");
         video.play();
+    }
+    else {
+        // If the device is very small, play the smaller version of the video
+        if (document.documentElement.clientWidth < 400) {
+            if (video.canPlayType("video/mp4")) {
+                video.src = "res/res-quarter/presentation.mp4";
+            }
+            if (video.canPlayType("video/webm")) {
+                video.src = "res/res-quarter/presentation.webm";
+            }
+            console.log("Video is in quarter size");
+        } else {
+            if (video.canPlayType("video/mp4")) {
+                video.src = "res/res-half/presentation.mp4";
+            }
+            if (video.canPlayType("video/webm")) {
+                video.src = "res/res-half/presentation.webm";
+            }
+            console.log("Video is in half size");
+        }
+
     }
 
     // Detect if the browser is webkit  

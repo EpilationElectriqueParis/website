@@ -209,11 +209,20 @@ section#contact {
     background-image: url("../res/res-full/bg4.webp");
 }
 
-section img {
+section#landing img {
     max-width: 100%;
     display: block;
     max-height: 6em;
     object-fit: contain;
+}
+
+section img {
+    display: block;
+    max-width: 50em;
+    object-fit: contain;
+    margin: 0 auto;
+    margin-top: 1em;
+
 }
 
 section video {
@@ -349,6 +358,7 @@ a.contact:hover {
 a.contact:hover span {
     color: #fff;
 }
+
 a.contact:hover img {
     filter: invert(100%);
 }

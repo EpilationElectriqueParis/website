@@ -344,7 +344,7 @@ a.contact span {
 a.contact img {
     width: 1em;
     height: 1em;
-    margin-right: 0.5em;
+    margin: 0.5em 0.5em 0.5em 0;
     /* Convert from black to #005dc7 */
     /*filter: invert(23%) sepia(97%) saturate(1678%) hue-rotate(194deg) brightness(97%) contrast(116%);*/
     /* Convert from black to #323232 */
